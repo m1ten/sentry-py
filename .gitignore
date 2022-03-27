@@ -1,0 +1,7 @@
+dist/
+.pytest_cache/
+__pycache__/
+.venv/
+old/
+poetry.lock
+.env

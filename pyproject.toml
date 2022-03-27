@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "sentry"
+version = "0.1.0"
+description = "yet another multi-purpose discord bot in python"
+authors = ["miten <git.pub@icloud.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/m1ten/sentry-py"
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+"discord.py" = { git = "https://github.com/Rapptz/discord.py.git", extras = [
+	"voice",
+] }
+wikipedia = "^1.4.0"
+python-dotenv = "^0.20.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+
+[tool.poetry.scripts]
+sentry = "src.sentry:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
